@@ -152,3 +152,4 @@ copy_pwd() {
 export EDITOR="nvim"
 export SHELL="/bin/zsh"
 export STARSHIP_CONFIG="${HOME}/.config/starship/starship.toml"
+export XDG_CONFIG_HOME="$HOME/.config"
