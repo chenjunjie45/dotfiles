@@ -11,7 +11,12 @@ add_newline = false
 # Replace the '❯' symbol in the prompt with '➜'
 [character] # The name of the module we are configuring is 'character'
 success_symbol = '[➜](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
-
+[time]
+disabled = false
+format = '🕙[\[ $time \]]($style) '
+#time_format = '%T'
+#utc_time_offset = '-5'
+#time_range = '10:00:00-14:00:00'
 # Disable the package module, hiding it from the prompt completely
 [package]
 disabled = true
@@ -41,7 +46,6 @@ disabled = true
 disabled = false
 
 [os.symbols]
-Ubuntu = "󰕈 "
 
 [java]
 format = '[${symbol}(${version} )]($style)'
