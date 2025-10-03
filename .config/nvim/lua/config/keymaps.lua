@@ -189,7 +189,7 @@ map({"n", "x" }, "<leader>gY", function()
 end, { desc = "Git Browse (copy)" })
 
 -- quit
-map("n", "Q", "<cmd>qa<cr>", { desc = "Quit All" })
+map("n", "W", "<cmd>qa<cr>", { desc = "Quit All" })
 
 -- highlights under cursor
 map("n", "<leader>ui", vim.show_pos, { desc = "Inspect Pos" })
