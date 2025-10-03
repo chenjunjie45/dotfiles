@@ -255,7 +255,7 @@ keymap = [
 	{ on = [ "/", "f" ],       run = "follow",           desc = "Follow hovered symlink" },
 
 	# Tabs
-	{ on = "T", run = "tab_create --current", desc = "Create a new tab with CWD" },
+	{ on = "N", run = "tab_create --current", desc = "Create a new tab with CWD" },
 
 	{ on = "1", run = "tab_switch 0", desc = "Switch to first tab" },
 	{ on = "2", run = "tab_switch 1", desc = "Switch to second tab" },
