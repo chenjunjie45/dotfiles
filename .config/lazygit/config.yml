@@ -408,7 +408,7 @@ refresher:
   fetchInterval: 60
 
 # If true, show a confirmation popup before quitting Lazygit
-confirmOnQuit: false
+confirmOnQuit: yes
 
 # If true, exit Lazygit when the user presses escape in a context where there is nothing to cancel/close
 quitOnTopLevelReturn: false
