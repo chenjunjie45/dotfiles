@@ -123,7 +123,7 @@ prepend_keymap = [
 	# Goto
 	{ on = [ "/", "d" ],       run = "cd ~/git/dotfiles",   desc = "Go to the dotfiles directory" },
 	{ on = [ "/", "n" ],       run = "cd ~/Documents/notes", desc = "Go to the notes" },
-	{ on = [ "/", "t" ],       run = "cd ~/.local/share/Trash", desc = "Go to the Trash" },
+	{ on = [ "/", "t" ],       run = "cd ~/.Trash", desc = "Go to the Trash" },
 
 	# Help
 	{ on = [ "?" ], run = "help", desc = "Open help" },
