@@ -38,21 +38,21 @@ edit = [
 	{ run = 'code -w %*', block = true,  desc = "code (block)",   for = "windows" },
 ]
 open = [
-	{ run = 'mpv "$@"',                 desc = "Open with mpv", for = "linux" },
-	{ run = 'display "$@"',                 desc = "Open with ImageMagick", for = "linux" },
-	{ run = 'qimgv "$@"',                   desc = "Open with qimgv", for = "linux" },
-	{ run = 'swayimg "$@"',                 desc = "Open with swayimg", for = "linux" },
-	{ run = 'xdg-open "$1"',                desc = "Open", for = "linux" },
+  { run = 'mpv "$@"',                 desc = "Open with mpv", for = "linux" },
+  #{ run = 'display "$@"',                 desc = "Open with ImageMagick", for = "linux" },
+  #{ run = 'qimgv "$@"',                   desc = "Open with qimgv", for = "linux" },
+  #{ run = 'swayimg "$@"',                 desc = "Open with swayimg", for = "linux" },
+  #{ run = 'xdg-open "$1"',                desc = "Open", for = "linux" },
 	{ run = 'open "$@"',                    desc = "Open", for = "macos" },
-	{ run = 'start "" "%1"', orphan = true, desc = "Open", for = "windows" },
-	{ run = 'termux-open "$1"',             desc = "Open", for = "android" },
+  #{ run = 'start "" "%1"', orphan = true, desc = "Open", for = "windows" },
+  #{ run = 'termux-open "$1"',             desc = "Open", for = "android" },
 ]
 reveal = [
-	{ run = 'xdg-open "$(dirname "$1")"',           desc = "Reveal", for = "linux" },
+  #{ run = 'xdg-open "$(dirname "$1")"',           desc = "Reveal", for = "linux" },
 	{ run = 'open -R "$1"',                         desc = "Reveal", for = "macos" },
-	{ run = 'explorer /select,"%1"', orphan = true, desc = "Reveal", for = "windows" },
-	{ run = 'termux-open "$(dirname "$1")"',        desc = "Reveal", for = "android" },
-	{ run = '''clear; exiftool "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show EXIF", for = "unix" },
+  #{ run = 'explorer /select,"%1"', orphan = true, desc = "Reveal", for = "windows" },
+  #{ run = 'termux-open "$(dirname "$1")"',        desc = "Reveal", for = "android" },
+  #{ run = '''clear; exiftool "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show EXIF", for = "unix" },
 ]
 extract = [
   #	{ run = 'engrampa "$1"', desc = "engrampa ui extract", for = "unix" },
@@ -63,21 +63,21 @@ extract = [
   #{ run = 'ya pub extract --list %*',   desc = "Extract here", for = "windows" },
 ]
 play = [
-	{ run = 'mpv --force-window "$@"', orphan = true, for = "unix" },
-	{ run = 'mpv --force-window %*', orphan = true, for = "windows" },
-	{ run = '''mediainfo "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show media info", for = "unix" },
+ { run = 'mpv --force-window "$@"', orphan = true, for = "unix" },
+  #{ run = 'mpv --force-window %*', orphan = true, for = "windows" },
+  #{ run = '''mediainfo "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show media info", for = "unix" },
 ]
-document = [
-	{ run = 'atril "$@"', orphan = true,  for = "unix" },
-]
-sqlite = [
-	{ run = 'sqlitestudio "$@"', orphan = true,  for = "unix" },
-]
+#document = [
+#	{ run = 'atril "$@"', orphan = true,  for = "unix" },
+#]
+#sqlite = [
+#	{ run = 'sqlitestudio "$@"', orphan = true,  for = "unix" },
+#]
 
 [open]
 # 手动修改打开有问题的文件类型可以根据后缀名指定软件，有的时候要/后缀名才生效
 prepend_rules = [
-	{ mime = "*/sqlite3",  use = [ "sqlite", "reveal" ] },
+  #	{ mime = "*/sqlite3",  use = [ "sqlite", "reveal" ] },
 	{ mime = "*.dart",  use = [ "edit", "reveal" ] },
 	{ mime = "*/sql",  use = [ "edit", "reveal" ] },
 	{ mime = "*.rar",  use = [ "extract", "reveal" ] },
@@ -159,6 +159,7 @@ prepend_previewers = [
 	# { mime = "*.dart", run = "code"},
 	# { mime = "*/sql", run = "code"},
 	# { mime = "*.rar", run = "archive" },
+  { mime = "audio/*",   run = "exifaudio"},
 
 	# Archive previewer
 	{ mime = "application/*zip",            run = "ouch" },
