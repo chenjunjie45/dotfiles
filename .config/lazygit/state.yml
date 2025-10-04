@@ -1,9 +1,9 @@
 lastupdatecheck: 0
 recentrepos:
     - /Users/chenjunjie/git/dotfiles
+    - /Users/chenjunjie/git/ai-assistant
     - /Users/chenjunjie/.local/share/nvim/lazy/LazyVim
     - /Users/chenjunjie/git/cicd
-    - /Users/chenjunjie/git/ai-assistant
 startuppopupversion: 5
 didshowhunkstaginghint: true
 lastversion: 0.55.1
