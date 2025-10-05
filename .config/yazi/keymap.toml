@@ -13,7 +13,7 @@ prepend_keymap = [
 	{ on = [ "i" ], run = "plugin smart-enter", desc = "Enter the child directory, or open the file" },
 	{ on = [ "<Right>" ], run = "plugin smart-enter", desc = "Enter the child directory, or open the file" },
 	# dragon-drop拖动文件
-	{ on = [ "<C-n>" ], run = 'shell -- dragon-drop -x -i -T "$1"', desc = "Run a shell command (block the UI until the command finishes)" },
+  #	{ on = [ "<C-n>" ], run = 'shell -- dragon-drop -x -i -T "$1"', desc = "Run a shell command (block the UI until the command finishes)" },
 	# 预览最大化
   #{ on = [ "F" ], run = "plugin --sync max-preview" },
 	# 隐藏预览
@@ -40,18 +40,18 @@ prepend_keymap = [
 	# Esc
   #{ on = [ "<Esc>" ], run = ["escape","quit --no-cwd-file"],             desc = "Exit visual mode, clear selected, or cancel search" },
   #{ on = [ "S" ],     run = 'shell "$SHELL" --block --confirm',               desc = "Exit the process" },
-	{ on = [ "<C-z>" ], run = "suspend",            desc = "Suspend the process" },
+  #{ on = [ "<C-z>" ], run = "suspend",            desc = "Suspend the process" },
 
 	# Navigation
-	{ on = [ "u" ], run = "arrow -1", desc = "Move cursor up" },
-	{ on = [ "e" ], run = "arrow 1",  desc = "Move cursor down" },
+  #	{ on = [ "u" ], run = "arrow -1", desc = "Move cursor up" },
+  #{ on = [ "e" ], run = "arrow 1",  desc = "Move cursor down" },
 
 	{ on = [ "U" ], run = "arrow -5", desc = "Move cursor up 5 lines" },
 	{ on = [ "E" ], run = "arrow 5",  desc = "Move cursor down 5 lines" },
 
 	{ on = [ "<C-u>" ], run = "arrow -50%",  desc = "Move cursor up half page" },
 	{ on = [ "<C-e>" ], run = "arrow 50%",   desc = "Move cursor down half page" },
-	{ on = [ "n" ], run = [ "leave", "escape --visual --select" ], desc = "Go back to the parent directory" },
+  #	{ on = [ "n" ], run = [ "leave", "escape --visual --select" ], desc = "Go back to the parent directory" },
 
 	# Selection
 	{ on = [ "v" ],       run = "toggle_all --state=none",                         desc = "反向选择" },
@@ -89,14 +89,14 @@ prepend_keymap = [
 	{ on = [ "D" ],         run = [ "remove --permanently", "escape --visual --select" ], desc = "Permanently delete the files" },
 
 	# Create
-	{ on = [ "M" ],         run = "shell --interactive 'mkdir -p '",                         desc = "Create a directory" },
+  #{ on = [ "M" ],         run = "shell --interactive 'mkdir -p '",                         desc = "Create a directory" },
   #{ on = [ "T" ],         run = "create",                                               desc = "Create a file or directory (ends with / for directories)" },
 
 	# Rename
   #{ on = [ "k" ],         run = "rename --cursor=before_ext",                           desc = "Rename a file or directory" },
   #{ on = [ "A" ],         run = "rename",                           desc = "Rename a file or directory" },
-	{ on = [ "c", "w" ],    run = "rename",                           desc = "Rename a file or directory" },
-	{ on = [ "c", "b" ],    run = "rename",                           desc = "Rename a file or directory" },
+  #{ on = [ "c", "w" ],    run = "rename",                           desc = "Rename a file or directory" },
+  #{ on = [ "c", "b" ],    run = "rename",                           desc = "Rename a file or directory" },
 
 	# Lazygit
 	{ on = [ "<C-g>" ], run = "shell --block --confirm 'lazygit'", desc = "Run a shell command (block the UI until the command finishes)" },
@@ -104,15 +104,15 @@ prepend_keymap = [
 
 	# Hidden
 	{ on = [ "." ],         run = "hidden toggle",                                        desc = "Toggle the visibility of hidden files" },
-	{ on = [ "z", "h" ],    run = "hidden toggle",                                        desc = "Toggle the visibility of hidden files" },
+  #	{ on = [ "z", "h" ],    run = "hidden toggle",                                        desc = "Toggle the visibility of hidden files" },
 
 	# Search
   #{ on = [ "<C-f>" ],         run = "plugin skim-rg", desc = "Search files by content via ripgrep and skim, open with neovim" },
   #{ on = [ "<C-t>" ],         run = "plugin skim",    desc = "Jump to a file via skim" },
 
 	# Find
-	{ on = [ "=" ], run = "find_arrow",              desc = "Go to next found file" },
-	{ on = [ "-" ], run = "find_arrow --previous",   desc = "Go to previous found file" },
+  #{ on = [ "=" ], run = "find_arrow",              desc = "Go to next found file" },
+  #{ on = [ "-" ], run = "find_arrow --previous",   desc = "Go to previous found file" },
 
 	# Tabs
   #{ on = [ "t","u" ], run = "tab_create --current", desc = "Create a new tab using the current path" },
@@ -130,11 +130,11 @@ prepend_keymap = [
 ]
 keymap = [
 	{ on = "<Esc>", run = "escape",             desc = "Exit visual mode, clear selection, or cancel search" },
-	{ on = "<C-[>", run = "escape",             desc = "Exit visual mode, clear selection, or cancel search" },
+  #{ on = "<C-[>", run = "escape",             desc = "Exit visual mode, clear selection, or cancel search" },
   #{ on = "q",     run = "quit",               desc = "Quit the process" },
   #{ on = "Q",     run = "quit --no-cwd-file", desc = "Quit without outputting cwd-file" },
   #{ on = "<C-c>", run = "close",              desc = "Close the current tab, or quit if it's last" },
-	{ on = "<C-z>", run = "suspend",            desc = "Suspend the process" },
+  #{ on = "<C-z>", run = "suspend",            desc = "Suspend the process" },
 
 	# Hopping
 	{ on = "k", run = "arrow prev", desc = "Previous file" },
@@ -143,14 +143,14 @@ keymap = [
 	{ on = "<Up>",   run = "arrow prev", desc = "Previous file" },
 	{ on = "<Down>", run = "arrow next", desc = "Next file" },
 
-	{ on = "<C-u>", run = "arrow -50%",  desc = "Move cursor up half page" },
-	{ on = "<C-d>", run = "arrow 50%",   desc = "Move cursor down half page" },
-	{ on = "<C-b>", run = "arrow -100%", desc = "Move cursor up one page" },
-	{ on = "<C-f>", run = "arrow 100%",  desc = "Move cursor down one page" },
+  #{ on = "<C-u>", run = "arrow -50%",  desc = "Move cursor up half page" },
+  #{ on = "<C-d>", run = "arrow 50%",   desc = "Move cursor down half page" },
+  #{ on = "<C-b>", run = "arrow -100%", desc = "Move cursor up one page" },
+  #{ on = "<C-f>", run = "arrow 100%",  desc = "Move cursor down one page" },
 
-	{ on = "<S-PageUp>",   run = "arrow -50%",  desc = "Move cursor up half page" },
-	{ on = "<S-PageDown>", run = "arrow 50%",   desc = "Move cursor down half page" },
-	{ on = "<PageUp>",     run = "arrow -100%", desc = "Move cursor up one page" },
+  #{ on = "<S-PageUp>",   run = "arrow -50%",  desc = "Move cursor up half page" },
+  #{ on = "<S-PageDown>", run = "arrow 50%",   desc = "Move cursor down half page" },
+  ##{ on = "<PageUp>",     run = "arrow -100%", desc = "Move cursor up one page" },
 	{ on = "<PageDown>",   run = "arrow 100%",  desc = "Move cursor down one page" },
 
 	{ on = [ "g", "g" ], run = "arrow top", desc = "Go to top" },
@@ -173,11 +173,11 @@ keymap = [
 
 	# Visual mode
 	{ on = "v", run = "visual_mode",         desc = "Enter visual mode (selection mode)" },
-	{ on = "V", run = "visual_mode --unset", desc = "Enter visual mode (unset mode)" },
+  #{ on = "V", run = "visual_mode --unset", desc = "Enter visual mode (unset mode)" },
 
 	# Seeking
-	{ on = "K", run = "seek -5", desc = "Seek up 5 units in the preview" },
-	{ on = "J", run = "seek 5",  desc = "Seek down 5 units in the preview" },
+  { on = "K", run = "seek -5", desc = "Seek up 5 units in the preview" },
+  { on = "J", run = "seek 5",  desc = "Seek down 5 units in the preview" },
 
 	# Spotting
 	{ on = "<Tab>", run = "spot", desc = "Spot hovered file" },
@@ -195,7 +195,7 @@ keymap = [
 	{ on = "_",         run = "link --relative",             desc = "Symlink the relative path of yanked files" },
 	{ on = "<C-->",     run = "hardlink",                    desc = "Hardlink yanked files" },
 	{ on = "Y",         run = "unyank",                      desc = "Cancel the yank status" },
-	{ on = "X",         run = "unyank",                      desc = "Cancel the yank status" },
+  #	{ on = "X",         run = "unyank",                      desc = "Cancel the yank status" },
 	{ on = "d",         run = "remove",                      desc = "Trash selected files" },
 	{ on = "D",         run = "remove --permanently",        desc = "Permanently delete selected files" },
 	{ on = "a",         run = "create",                      desc = "Create a file (ends with / for directories)" },
@@ -229,8 +229,8 @@ keymap = [
 	# Find
   #{ on = "/", run = "find --smart",            desc = "Find next file" },
   #{ on = "?", run = "find --previous --smart", desc = "Find previous file" },
-  #{ on = "n", run = "find_arrow",              desc = "Next found" },
-  #{ on = "N", run = "find_arrow --previous",   desc = "Previous found" },
+  { on = "n", run = "find_arrow",              desc = "Next found" },
+  { on = "N", run = "find_arrow --previous",   desc = "Previous found" },
 
 	# Sorting
 	{ on = [ ",", "m" ], run = [ "sort mtime --reverse=no", "linemode mtime" ], desc = "Sort by modified time" },
@@ -248,6 +248,7 @@ keymap = [
 	{ on = [ ",", "r" ], run = "sort random --reverse=no",                      desc = "Sort randomly" },
 
 	# Goto
+  { on = ["/","f"], run = "find --smart",            desc = "Find next file" },
 	{ on = [ "/", "<Space>" ],       run = "cd ~",             desc = "Go home" },
 	{ on = [ "/", "c" ],       run = "cd ~/.config",     desc = "Go ~/.config" },
 	{ on = [ "/", "d" ],       run = "cd ~/Downloads",   desc = "Go ~/Downloads" },
@@ -256,7 +257,7 @@ keymap = [
 	{ on = [ "/", "g" ],       run = "cd ~/git",           desc = "Go ~/git" },
 
 	# Tabs
-	{ on = "N", run = "tab_create --current", desc = "Create a new tab with CWD" },
+	{ on = "T", run = "tab_create --current", desc = "Create a new tab with CWD" },
 
 	{ on = "1", run = "tab_switch 0", desc = "Switch to first tab" },
 	{ on = "2", run = "tab_switch 1", desc = "Switch to second tab" },
@@ -279,15 +280,15 @@ keymap = [
 
 	# Help
 	{ on = "~",    run = "help", desc = "Open help" },
-	{ on = "<F1>", run = "help", desc = "Open help" },
+  #	{ on = "<F1>", run = "help", desc = "Open help" },
 ]
 
 [tasks]
 
 # 手动修改通过w打开的任务面板的键位
 prepend_keymap = [
-	{ on = [ "u" ], run = "arrow -1", desc = "Move cursor up" },
-	{ on = [ "e" ], run = "arrow 1",  desc = "Move cursor down" },
+  #{ on = [ "u" ], run = "arrow -1", desc = "Move cursor up" },
+  #{ on = [ "e" ], run = "arrow 1",  desc = "Move cursor down" },
 	{ on = [ "i" ], run = "inspect", desc = "Inspect the task" },
 	{ on = [ "?" ], run = "help", desc = "Open help" },
 	{ on = [ "d" ],       run = "cancel",  desc = "Cancel the task" },
@@ -295,7 +296,7 @@ prepend_keymap = [
 
 keymap = [
 	{ on = "<Esc>", run = "close", desc = "Close task manager" },
-	{ on = "<C-[>", run = "close", desc = "Close task manager" },
+  #	{ on = "<C-[>", run = "close", desc = "Close task manager" },
 	{ on = "<C-c>", run = "close", desc = "Close task manager" },
 	{ on = "w",     run = "close", desc = "Close task manager" },
 
@@ -316,12 +317,12 @@ keymap = [
 [spot]
 
 prepend_keymap = [
-	{ on = [ "u" ], run = "arrow -1", desc = "Move cursor up" },
-	{ on = [ "e" ], run = "arrow 1",  desc = "Move cursor down" },
+  #{ on = [ "u" ], run = "arrow -1", desc = "Move cursor up" },
+  #{ on = [ "e" ], run = "arrow 1",  desc = "Move cursor down" },
 	{ on = [ "U" ], run = "arrow -5", desc = "Move cursor up 5 lines" },
 	{ on = [ "E" ], run = "arrow 5",  desc = "Move cursor down 5 lines" },
 	{ on = [ "n" ], run = "swipe -1", desc = "Swipe to the next file" },
-	{ on = [ "i" ], run = "swipe 1",  desc = "Swipe to the previous file" },
+	{ on = [ "N" ], run = "swipe 1",  desc = "Swipe to the previous file" },
 	{ on = [ "?" ], run = "help", desc = "Open help" }
 ]
 
@@ -346,24 +347,24 @@ keymap = [
 
 	# Help
 	{ on = "~",    run = "help", desc = "Open help" },
-	{ on = "<F1>", run = "help", desc = "Open help" },
+  #	{ on = "<F1>", run = "help", desc = "Open help" },
 ]
 
 [pick]
 
 # 手动修改通过o打开的小窗口的键位
 prepend_keymap = [
-	{ on = [ "u" ], run = "arrow -1", desc = "Move cursor up" },
-	{ on = [ "e" ], run = "arrow 1",  desc = "Move cursor down" },
+  #{ on = [ "u" ], run = "arrow -1", desc = "Move cursor up" },
+  #{ on = [ "e" ], run = "arrow 1",  desc = "Move cursor down" },
 	{ on = [ "U" ], run = "arrow -5", desc = "Move cursor up 5 lines" },
 	{ on = [ "E" ], run = "arrow 5",  desc = "Move cursor down 5 lines" },
-	{ on = [ "i" ], run = "close --submit", desc = "Submit the pick" },
+  #{ on = [ "i" ], run = "close --submit", desc = "Submit the pick" },
 	{ on = [ "?" ], run = "help", desc = "Open help" }
 ]
 
 keymap = [
 	{ on = "<Esc>",   run = "close",          desc = "Cancel pick" },
-	{ on = "<C-[>",   run = "close",          desc = "Cancel pick" },
+  #	{ on = "<C-[>",   run = "close",          desc = "Cancel pick" },
 	{ on = "<C-c>",   run = "close",          desc = "Cancel pick" },
 	{ on = "<Enter>", run = "close --submit", desc = "Submit the pick" },
 
@@ -375,7 +376,7 @@ keymap = [
 
 	# Help
 	{ on = "~",    run = "help", desc = "Open help" },
-	{ on = "<F1>", run = "help", desc = "Open help" },
+  #	{ on = "<F1>", run = "help", desc = "Open help" },
 ]
 
 #[input]
@@ -479,7 +480,7 @@ keymap = [
 
 keymap = [
   { on = "<Esc>",   run = "close",          desc = "Cancel the confirm" },
-	{ on = "<C-[>",   run = "close",          desc = "Cancel the confirm" },
+  #	{ on = "<C-[>",   run = "close",          desc = "Cancel the confirm" },
 	{ on = "<C-c>",   run = "close",          desc = "Cancel the confirm" },
 	{ on = "<Enter>", run = "close --submit", desc = "Submit the confirm" },
 
@@ -494,7 +495,7 @@ keymap = [
 
 	# Help
 	{ on = "~",    run = "help", desc = "Open help" },
-	{ on = "<F1>", run = "help", desc = "Open help" },
+  #	{ on = "<F1>", run = "help", desc = "Open help" },
 ]
 
 [completion]
@@ -511,18 +512,18 @@ keymap = [
 	{ on = "<Tab>",   run = "close --submit",                             desc = "Submit the completion" },
 	{ on = "<Enter>", run = [ "close --submit", "input:close --submit" ], desc = "Complete and submit the input" },
 
-	{ on = "<A-k>", run = "arrow prev", desc = "Previous item" },
-	{ on = "<A-j>", run = "arrow next", desc = "Next item" },
+  #{ on = "<A-k>", run = "arrow prev", desc = "Previous item" },
+  #{ on = "<A-j>", run = "arrow next", desc = "Next item" },
 
 	{ on = "<Up>",   run = "arrow prev", desc = "Previous item" },
 	{ on = "<Down>", run = "arrow next", desc = "Next item" },
 
-	{ on = "<C-p>", run = "arrow prev", desc = "Previous item" },
-	{ on = "<C-n>", run = "arrow next", desc = "Next item" },
+  #{ on = "<C-p>", run = "arrow prev", desc = "Previous item" },
+  #{ on = "<C-n>", run = "arrow next", desc = "Next item" },
 
 	# Help
 	{ on = "~",    run = "help", desc = "Open help" },
-	{ on = "<F1>", run = "help", desc = "Open help" },
+  #	{ on = "<F1>", run = "help", desc = "Open help" },
 ]
 
 [help]
@@ -530,8 +531,8 @@ keymap = [
 # 手动修改的帮助页面相关键位
 prepend_keymap = [
 	# Navigation
-  #{ on = [ "u" ], run = "arrow -1", desc = "Move cursor up" },
-  #{ on = [ "e" ], run = "arrow 1",  desc = "Move cursor down" },
+  #  { on = [ "u" ], run = "arrow -1", desc = "Move cursor up" },
+  # { on = [ "e" ], run = "arrow 1",  desc = "Move cursor down" },
 
 	{ on = [ "U" ], run = "arrow -5", desc = "Move cursor up 5 lines" },
 	{ on = [ "E" ], run = "arrow 5",  desc = "Move cursor down 5 lines" },
@@ -539,7 +540,7 @@ prepend_keymap = [
 
 keymap = [
   { on = "<Esc>", run = "escape", desc = "Clear the filter, or hide the help" },
-	{ on = "<C-[>", run = "escape", desc = "Clear the filter, or hide the help" },
+  #	{ on = "<C-[>", run = "escape", desc = "Clear the filter, or hide the help" },
 	{ on = "<C-c>", run = "close",  desc = "Hide the help" },
 
 	# Navigation
