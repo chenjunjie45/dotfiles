@@ -10,8 +10,8 @@ prepend_keymap = [
 	# 挂载文件系统
 	{ on = [ "m","M" ], run = "plugin mount", desc = "Mount a file system" },
 	# 智能进入目录或打开文件
-	{ on = [ "i" ], run = "plugin smart-enter", desc = "Enter the child directory, or open the file" },
-  #{ on = [ "<Right>" ], run = "plugin smart-enter", desc = "Enter the child directory, or open the file" },
+  #	{ on = [ "i" ], run = "plugin smart-enter", desc = "Enter the child directory, or open the file" },
+  { on = [ "<Right>" ], run = "plugin smart-enter", desc = "Enter the child directory, or open the file" },
 	# dragon-drop拖动文件
   #	{ on = [ "<C-n>" ], run = 'shell -- dragon-drop -x -i -T "$1"', desc = "Run a shell command (block the UI until the command finishes)" },
 	# 预览最大化
@@ -23,7 +23,7 @@ prepend_keymap = [
 	# 更改文件权限chmod.yazi
 	{ on = [ "c","m" ], run = "plugin chmod", desc = "Chmod on selected files" },
 	# 比较文件diff.yazi
-	{ on = [ "<C-d>" ], run = "plugin diff", desc = "Diff the selected with the hovered file" },
+  #{ on = [ "<C-d>" ], run = "plugin diff", desc = "Diff the selected with the hovered file" },
 	# sudo touch/mkdir
 	{ on = [ "R", "T" ], run = "plugin sudo --args='create'", desc = "sudo create a file or directory (ends with / for directories)" },
 	# sudo rename
@@ -50,7 +50,7 @@ prepend_keymap = [
 	{ on = [ "E" ], run = "arrow 5",  desc = "Move cursor down 5 lines" },
 
 	{ on = [ "<C-u>" ], run = "arrow -50%",  desc = "Move cursor up half page" },
-	{ on = [ "<C-e>" ], run = "arrow 50%",   desc = "Move cursor down half page" },
+	{ on = [ "<C-d>" ], run = "arrow 50%",   desc = "Move cursor down half page" },
   #	{ on = [ "n" ], run = [ "leave", "escape --visual --select" ], desc = "Go back to the parent directory" },
 
 	# Selection
@@ -76,7 +76,6 @@ prepend_keymap = [
 
 	# Cut
 	{ on = [ "x" ],         run = [ "yank --cut", "escape --visual --select" ],           desc = "Cut the selected files" },
-	{ on = [ "d", "d" ],         run = [ "yank --cut", "escape --visual --select" ],           desc = "Cut the selected files" },
 
 	# Paste
   { on = [ "p", "p" ],         run = "paste",                                           desc = "Paste the files" },
@@ -85,8 +84,13 @@ prepend_keymap = [
 	{ on = [ "p", "L" ],         run = "link --relative",                                 desc = "Symlink the relative path of files" },
 
 	# Delete
-	{ on = [ "d", "D" ],    run = [ "remove", "escape --visual --select" ],               desc = "Move the files to the trash" },
+	{ on = [ "d", "d" ],    run = [ "remove", "escape --visual --select" ],               desc = "Move the files to the trash" },
+  #{ on = [ "d", "d" ],         run = [ "yank --cut", "escape --visual --select" ],           desc = "Cut the selected files" },
+
+  #{ on = [ "<C-d>" ], run = "plugin diff", desc = "Diff the selected with the hovered file" },
+  { on = ["d","i"],        run = "plugin diff", desc = "Diff the selected with the hovered file" },  
 	{ on = [ "D" ],         run = [ "remove --permanently", "escape --visual --select" ], desc = "Permanently delete the files" },
+
 
 	# Create
   #{ on = [ "M" ],         run = "shell --interactive 'mkdir -p '",                         desc = "Create a directory" },
@@ -169,7 +173,7 @@ keymap = [
 	# Toggle
 	{ on = "<Space>", run = [ "toggle", "arrow next" ], desc = "Toggle the current selection state" },
 	{ on = "<C-a>",   run = "toggle_all --state=on",    desc = "Select all files" },
-	{ on = "<C-r>",   run = "toggle_all",               desc = "Invert selection of all files" },
+  #{ on = "<C-r>",   run = "toggle_all",               desc = "Invert selection of all files" },
 
 	# Visual mode
 	{ on = "v", run = "visual_mode",         desc = "Enter visual mode (selection mode)" },
@@ -197,7 +201,6 @@ keymap = [
 	{ on = "Y",         run = "unyank",                      desc = "Cancel the yank status" },
   #	{ on = "X",         run = "unyank",                      desc = "Cancel the yank status" },
 	{ on = "d",         run = "remove",                      desc = "Trash selected files" },
-	{ on = "D",         run = "remove --permanently",        desc = "Permanently delete selected files" },
 	{ on = "a",         run = "create",                      desc = "Create a file (ends with / for directories)" },
 	{ on = "r",         run = "rename --cursor=before_ext",  desc = "Rename selected file(s)" },
 	{ on = ";",         run = "shell --interactive",         desc = "Run a shell command" },
