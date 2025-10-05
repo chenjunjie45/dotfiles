@@ -530,8 +530,8 @@ keymap = [
 # 手动修改的帮助页面相关键位
 prepend_keymap = [
 	# Navigation
-	{ on = [ "u" ], run = "arrow -1", desc = "Move cursor up" },
-	{ on = [ "e" ], run = "arrow 1",  desc = "Move cursor down" },
+  #{ on = [ "u" ], run = "arrow -1", desc = "Move cursor up" },
+  #{ on = [ "e" ], run = "arrow 1",  desc = "Move cursor down" },
 
 	{ on = [ "U" ], run = "arrow -5", desc = "Move cursor up 5 lines" },
 	{ on = [ "E" ], run = "arrow 5",  desc = "Move cursor down 5 lines" },
