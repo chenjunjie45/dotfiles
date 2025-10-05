@@ -207,7 +207,7 @@ keymap = [
 	{ on = "S",         run = "search --via=rg",             desc = "Search files by content via ripgrep" },
 	{ on = "<C-s>",     run = "escape --search",             desc = "Cancel the ongoing search" },
 	{ on = "f",         run = "plugin fzf",                  desc = "Jump to a file/directory via fzf" },
-  #{ on = "F",         run = "plugin zoxide",               desc = "Jump to a directory via zoxide" },
+  { on = "F",         run = "plugin zoxide",               desc = "Jump to a directory via zoxide" },
 
 	# Linemode
 	{ on = [ "m", "s" ], run = "linemode size",        desc = "Linemode: size" },
@@ -252,7 +252,6 @@ keymap = [
 	{ on = [ "/", "c" ],       run = "cd ~/.config",     desc = "Go ~/.config" },
 	{ on = [ "/", "d" ],       run = "cd ~/Downloads",   desc = "Go ~/Downloads" },
   { on = [ "/", "/" ], run = "cd --interactive", desc = "Jump interactively" },
-  { on = [ "F" ], run = "plugin fzf-cd", desc = "Jump interactively" },
 	{ on = [ "/", "f" ],       run = "follow",           desc = "Follow hovered symlink" },
 	{ on = [ "/", "g" ],       run = "cd ~/git",           desc = "Go ~/git" },
 
