@@ -11,13 +11,13 @@ prepend_keymap = [
 	{ on = [ "m","M" ], run = "plugin mount", desc = "Mount a file system" },
 	# 智能进入目录或打开文件
 	{ on = [ "i" ], run = "plugin smart-enter", desc = "Enter the child directory, or open the file" },
-	{ on = [ "<Right>" ], run = "plugin smart-enter", desc = "Enter the child directory, or open the file" },
+  #{ on = [ "<Right>" ], run = "plugin smart-enter", desc = "Enter the child directory, or open the file" },
 	# dragon-drop拖动文件
   #	{ on = [ "<C-n>" ], run = 'shell -- dragon-drop -x -i -T "$1"', desc = "Run a shell command (block the UI until the command finishes)" },
 	# 预览最大化
-  #{ on = [ "F" ], run = "plugin --sync max-preview" },
+  #{ on = [ "z","f" ], run = "plugin --sync max-preview" },
 	# 隐藏预览
-	{ on = [ "z","m" ], run = "plugin --sync hide-preview" },
+  #{ on = [ "z","m" ], run = "plugin --sync hide-preview" },
 	# 使用ouch压缩
 	{ on = [ "C" ], run = "plugin ouch --args=zip", desc = "Compress with ouch" },
 	# 更改文件权限chmod.yazi
