@@ -9,19 +9,18 @@ return {
   keys = {
     -- 👇 in this section, choose your own keymappings!
     {
-      "<leader>-",
-      mode = { "n", "v" },
+      "<leader>e",
       "<cmd>Yazi<cr>",
       desc = "Open yazi at the current file",
     },
     {
       -- Open in the current working directory
-      "<leader>cw",
+      "<leader>E",
       "<cmd>Yazi cwd<cr>",
       desc = "Open the file manager in nvim's working directory",
     },
     {
-      "<c-up>",
+      "<leader>zz",
       "<cmd>Yazi toggle<cr>",
       desc = "Resume the last yazi session",
     },
