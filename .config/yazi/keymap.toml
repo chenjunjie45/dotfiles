@@ -123,6 +123,7 @@ prepend_keymap = [
   #{ on = [ "t","n" ], run = "tab_switch -1 --relative", desc = "Switch to the previous tab" },
   #{ on = [ "t","i" ], run = "tab_switch 1 --relative",  desc = "Switch to the next tab" },
   { on = [ "q","q" ], run = "close",              desc = "Close the current tab, or quit if it is last tab" },
+  { on = [ "<Space>","e" ], run = "close",              desc = "Close the current tab, or quit if it is last tab" },
 
 	# Goto
 	{ on = [ "/", "d" ],       run = "cd ~/git/dotfiles",   desc = "Go to the dotfiles directory" },
