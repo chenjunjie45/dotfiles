@@ -10,5 +10,6 @@ return {
         files = { hidden = true },
       },
     },
+    -- explorer = { enabled = false },
   },
 }
