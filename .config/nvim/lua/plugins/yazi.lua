@@ -9,7 +9,7 @@ return {
   keys = {
     -- 👇 in this section, choose your own keymappings!
     {
-      "<leader>e",
+      "<leader>zz",
       "<cmd>Yazi<cr>",
       desc = "Open yazi at the current file",
     },
@@ -20,7 +20,7 @@ return {
       desc = "Open the file manager in nvim's working directory",
     },
     {
-      "<leader>zz",
+      "<leader>e",
       "<cmd>Yazi toggle<cr>",
       desc = "Resume the last yazi session",
     },

@@ -1,6 +1,7 @@
 lastupdatecheck: 0
 recentrepos:
     - /Users/chenjunjie/git/dotfiles
+    - /Users/chenjunjie/git/nvim
     - /Users/chenjunjie/git/ai-assistant
     - /Users/chenjunjie/git/cicd
 startuppopupversion: 5
