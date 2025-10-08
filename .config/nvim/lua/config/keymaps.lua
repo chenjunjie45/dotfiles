@@ -202,7 +202,22 @@ map("n", "<leader>L", function() LazyVim.news.changelog() end, { desc = "LazyVim
 -- floating terminal
 map("n", "<leader>fT", function() Snacks.terminal() end, { desc = "Terminal (cwd)" })
 map("n", "<leader>ft", function() Snacks.terminal(nil, { cwd = LazyVim.root() }) end, { desc = "Terminal (Root Dir)" })
-map("n", "<c-/>",      function() Snacks.terminal(nil, { cwd = LazyVim.root() }) end, { desc = "Terminal (Root Dir)" })
+-- map("n", "<c-/>",      function() Snacks.terminal(nil, { cwd = LazyVim.root() }) end, { desc = "Terminal (Root Dir)" })
+map("n", "<c-/>", function()
+  Snacks.terminal(nil, {
+    cwd = LazyVim.root(),
+    -- 窗口大小配置
+    win = {
+      -- 高度：0.5 表示占屏幕高度的 50%
+      height = 0.8,
+      -- 宽度：0.8 表示占屏幕宽度的 80%
+      width = 0.8,
+      -- 位置可选：float/bottom/top/left/right（默认无命令时为 bottom）
+      position = "float",
+       border = "rounded",
+    }
+  })
+end, { desc = "Terminal (Root Dir)" })
 map("n", "<c-_>",      function() Snacks.terminal(nil, { cwd = LazyVim.root() }) end, { desc = "which_key_ignore" })
 
 -- Terminal Mappings
