@@ -103,7 +103,7 @@ prepend_keymap = [
   #{ on = [ "c", "b" ],    run = "rename",                           desc = "Rename a file or directory" },
 
 	# Lazygit
-	{ on = [ "<C-g>" ], run = "shell --block --confirm 'lazygit'", desc = "Run a shell command (block the UI until the command finishes)" },
+	{ on = [ "<C-g>" ], run = "shell --block 'lazygit'", desc = "Run a shell command (block the UI until the command finishes)" },
 
 
 	# Hidden

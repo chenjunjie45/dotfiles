@@ -9,7 +9,7 @@ return {
   keys = {
     -- 👇 in this section, choose your own keymappings!
     {
-      "<leader>zz",
+      "<leader>e",
       "<cmd>Yazi<cr>",
       desc = "Open yazi at the current file",
     },
@@ -20,7 +20,7 @@ return {
       desc = "Open the file manager in nvim's working directory",
     },
     {
-      "<leader>e",
+      "<leader>zz",
       "<cmd>Yazi toggle<cr>",
       desc = "Resume the last yazi session",
     },
@@ -31,6 +31,7 @@ return {
     open_for_directories = false,
     keymaps = {
       show_help = "<f1>",
+      replace_in_directory = "<f5>",
     },
   },
   -- 👇 if you use `open_for_directories=true`, this is recommended
