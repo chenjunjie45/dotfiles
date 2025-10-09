@@ -202,16 +202,18 @@ map("n", "<leader>L", function() LazyVim.news.changelog() end, { desc = "LazyVim
 -- floating terminal
 map("n", "<leader>fT", function() Snacks.terminal() end, { desc = "Terminal (cwd)" })
 map("n", "<leader>ft", function() Snacks.terminal(nil, { cwd = LazyVim.root() }) end, { desc = "Terminal (Root Dir)" })
+
 -- map("n", "<c-/>",      function() Snacks.terminal(nil, { cwd = LazyVim.root() }) end, { desc = "Terminal (Root Dir)" })
 map("n", "<c-/>", function()
   Snacks.terminal(nil, {
+    style = "terminal",
     cwd = LazyVim.root(),
     -- 窗口大小配置
     win = {
       -- 高度：0.5 表示占屏幕高度的 50%
-      height = 0.8,
+      height = 0.9,
       -- 宽度：0.8 表示占屏幕宽度的 80%
-      width = 0.8,
+      width = 0.9,
       -- 位置可选：float/bottom/top/left/right（默认无命令时为 bottom）
       position = "float",
        border = "rounded",
@@ -227,6 +229,7 @@ map("t", "<c-_>", "<cmd>close<cr>", { desc = "which_key_ignore" })
 -- windows
 map("n", "<leader>-", "<C-W>s", { desc = "Split Window Below", remap = true })
 map("n", "<leader>|", "<C-W>v", { desc = "Split Window Right", remap = true })
+map("n", "<D-D>", "<C-W>v", { desc = "Split Window Right", remap = true })
 map("n", "<leader>wd", "<C-W>c", { desc = "Delete Window", remap = true })
 Snacks.toggle.zoom():map("<leader>wm"):map("<leader>uZ")
 Snacks.toggle.zen():map("<leader>uz")
