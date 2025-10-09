@@ -139,8 +139,8 @@ alias tar="gtar"
 alias q="yazi"
 alias g="lazygit"
 #alias kitty="kitty @ launch --type=tab"
-#export TERM=xterm-256color
-export TERM=xterm-kitty
+export TERM=xterm-256color
+# export TERM=xterm-kitty
 #export TERM=vt100
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
