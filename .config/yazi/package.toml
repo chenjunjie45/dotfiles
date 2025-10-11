@@ -58,5 +58,10 @@ use = "Shallow-Seek/modif"
 rev = "2b3a09e"
 hash = "c32a76c9caa9cfc6cc10c83bcbebf4d0"
 
+[[plugin.deps]]
+use = "Ape/open-with-cmd"
+rev = "433cf30"
+hash = "86e0312b01bc5762813c6c1d0517f073"
+
 [flavor]
 deps = []

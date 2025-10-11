@@ -11,7 +11,7 @@ vim.keymap.set("i", "<C-e>", "<C-o>$", { desc = "Go to Line End (Insert)" })
 -- Normal + Visual 模式
 vim.keymap.set({ "n", "v" }, "<C-a>", "^", { desc = "Go to Line Start" })
 vim.keymap.set({ "n", "v" }, "<C-e>", "$", { desc = "Go to Line End" })
-
+-- 视觉模式下按<C-/>发送选中命令到终端执行 terminal
 -- Command-line 模式
 vim.cmd([[
   cnoremap <C-a> <Home>
@@ -220,11 +220,11 @@ map("n", "<c-/>", function()
     }
   })
 end, { desc = "Terminal (Root Dir)" })
-map("n", "<c-_>",      function() Snacks.terminal(nil, { cwd = LazyVim.root() }) end, { desc = "which_key_ignore" })
+-- map("n", "<c-_>",      function() Snacks.terminal(nil, { cwd = LazyVim.root() }) end, { desc = "which_key_ignore" })
 
 -- Terminal Mappings
 map("t", "<C-/>", "<cmd>close<cr>", { desc = "Hide Terminal" })
-map("t", "<c-_>", "<cmd>close<cr>", { desc = "which_key_ignore" })
+-- map("t", "<c-_>", "<cmd>close<cr>", { desc = "which_key_ignore" })
 
 -- windows
 map("n", "<leader>-", "<C-W>s", { desc = "Split Window Below", remap = true })
@@ -242,3 +242,10 @@ map("n", "<leader><tab><tab>", "<cmd>tabnew<cr>", { desc = "New Tab" })
 map("n", "<leader><tab>]", "<cmd>tabnext<cr>", { desc = "Next Tab" })
 map("n", "<leader><tab>d", "<cmd>tabclose<cr>", { desc = "Close Tab" })
 map("n", "<leader><tab>[", "<cmd>tabprevious<cr>", { desc = "Previous Tab" })
+
+-- 注释
+-- 普通模式下，cmd+/ 切换当前行注释
+vim.keymap.set("n", "<D-/>", "gcc", { desc = "Toggle line comment", remap = true })
+
+-- 可视模式下，cmd+/ 切换选中区域注释
+vim.keymap.set("v", "<D-/>", "gc", { desc = "Toggle visual selection comment", remap = true })

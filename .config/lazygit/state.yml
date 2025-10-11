@@ -1,9 +1,9 @@
 lastupdatecheck: 0
 recentrepos:
     - /Users/chenjunjie/git/dotfiles
-    - /Users/chenjunjie/git/cicd
     - /Users/chenjunjie/git/ai-assistant
     - /Users/chenjunjie/git/deployment_mediums
+    - /Users/chenjunjie/git/cicd
     - /Users/chenjunjie/git/nvim
 startuppopupversion: 5
 didshowhunkstaginghint: true
