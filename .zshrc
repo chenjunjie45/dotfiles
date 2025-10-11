@@ -10,9 +10,9 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 #插件
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-#source ~/.zsh/copybuffer.plugin.zsh
-#source ~/.zsh/copyfile.plugin.zsh
-#source ~/.zsh/zsh-you-should-use/you-should-use.plugin.zsh
+source ~/.zsh/copybuffer.plugin.zsh
+source ~/.zsh/copyfile.plugin.zsh
+source ~/.zsh/you-should-use.plugin.zsh
 source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 #source ~/.oh-my-zsh/custom/plugins/you-should-use/you-should-use.plugin.zsh
 #source ~/.zsh/copypath.plugin.zsh
@@ -154,3 +154,4 @@ export EDITOR="nvim"
 export SHELL="/bin/zsh"
 export STARSHIP_CONFIG="${HOME}/.config/starship/starship.toml"
 export XDG_CONFIG_HOME="$HOME/.config"
+export PATH="/opt/homebrew/opt/trash-cli/bin:$PATH"

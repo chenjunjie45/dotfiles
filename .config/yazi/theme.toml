@@ -2,5 +2,5 @@
 # If you encounter any issues, please make an issue at https://github.com/yazi-rs/schemas.
 
 [flavor]
-dark = "dracula"
-light = "dracula"
+dark = "tokyo-night"
+light = "tokyo-night"

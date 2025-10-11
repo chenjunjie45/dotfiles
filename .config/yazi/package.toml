@@ -43,5 +43,20 @@ use = "cap153/skim-rg"
 rev = "e857105"
 hash = "e8a6b33ddc0f1b9ff31ecaa171db7343"
 
+[[plugin.deps]]
+use = "yazi-rs/plugins:smart-filter"
+rev = "d1c8baa"
+hash = "bcda8eeb3f4013bae156aecabfc745e8"
+
+[[plugin.deps]]
+use = "boydaihungst/restore"
+rev = "2161735"
+hash = "901741afba1979739b4650324265162e"
+
+[[plugin.deps]]
+use = "Shallow-Seek/modif"
+rev = "2b3a09e"
+hash = "c32a76c9caa9cfc6cc10c83bcbebf4d0"
+
 [flavor]
 deps = []
